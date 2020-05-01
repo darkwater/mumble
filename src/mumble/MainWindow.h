@@ -111,6 +111,10 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 
 		QPoint qpContextPosition;
 
+		MUComboBox *qcbTransmitMode;
+		QAction *qaTransmitMode;
+		QAction *qaTransmitModeSeparator;
+
 		void recheckTTS();
 		void msgBox(QString msg);
 		void setOnTop(bool top);
@@ -149,10 +153,6 @@ class MainWindow : public QMainWindow, public MessageHandler, public Ui::MainWin
 		QMap<unsigned int, UserInformation *> qmUserInformations;
 
 		PTTButtonWidget *qwPTTButtonWidget;
-
-		MUComboBox *qcbTransmitMode;
-		QAction *qaTransmitMode;
-		QAction *qaTransmitModeSeparator;
 
 		void createActions();
 		void setupGui();

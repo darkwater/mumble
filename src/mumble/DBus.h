@@ -24,6 +24,8 @@ class MumbleDBus : public QDBusAbstractAdaptor {
 		void getCurrentUrl(const QDBusMessage &);
 		void getTalkingUsers(const QDBusMessage &);
 		void focus();
+		void setTransmitMode(unsigned int mode);
+		unsigned int getTransmitMode();
 		void setSelfMuted(bool mute);
 		void setSelfDeaf(bool deafen);
 		bool isSelfMuted();

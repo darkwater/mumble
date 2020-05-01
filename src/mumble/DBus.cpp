@@ -80,6 +80,15 @@ void MumbleDBus::focus() {
 	g.mw->activateWindow();
 }
 
+void MumbleDBus::setTransmitMode(unsigned int mode) {
+	g.mw->qcbTransmitMode->setCurrentIndex(mode);
+	emit g.mw->qcbTransmitMode->activated(mode);
+}
+
+unsigned int MumbleDBus::getTransmitMode() {
+	return g.s.atTransmit;
+}
+
 void MumbleDBus::setSelfMuted(bool mute) {
 	g.mw->qaAudioMute->setChecked(!mute);
 	g.mw->qaAudioMute->trigger();
